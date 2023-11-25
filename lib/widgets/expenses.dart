@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_skilaverkefni_3/models/expense.dart';
 import 'package:flutter_skilaverkefni_3/widgets/new_expense.dart';
 import 'expenses_list/expenses_list.dart';
+import 'package:flutter_skilaverkefni_3/widgets/chart/chart.dart';
 
 class Expenses extends StatefulWidget {
   const Expenses({super.key});
@@ -88,7 +89,7 @@ class _ExpensesState extends State<Expenses> {
       ),
       body: Column(
         children: [
-          const Text('The Chart'),
+          Chart(expenses: _registeredExpenses),
           Expanded(
             child: mainContent
           ),
