@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_skilaverkefni_3/widgets/expenses.dart';
 
 var kColorScheme = ColorScheme.fromSeed(
-  seedColor:const Color.fromARGB(255, 96, 59, 181),
+  seedColor:Color.fromARGB(255, 78, 32, 184),
 );
 
 var kDarkColorScheme = ColorScheme.fromSeed(
