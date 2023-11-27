@@ -83,7 +83,7 @@ class _newExpenseState extends State<NewExpense> {
             controller: _titleController,
             maxLength: 50,
             decoration: const InputDecoration(
-              label: Text('Title'),
+              label: Text('Titill'),
             ),
           ),
           Row(
@@ -94,7 +94,7 @@ class _newExpenseState extends State<NewExpense> {
                   keyboardType: TextInputType.number,
                   decoration: const InputDecoration(
                     prefixText: 'isk ',
-                    label: Text('Amount'),
+                    label: Text('Verð'),
                   ),
                 ),
               ),
@@ -106,7 +106,7 @@ class _newExpenseState extends State<NewExpense> {
                   children: [
                     Text(
                       _selectedDate == null
-                          ? 'No Date Selected'
+                          ? 'Veldu dagsetningu'
                           : formatter.format(_selectedDate!),
                     ),
                     IconButton(
@@ -132,7 +132,7 @@ class _newExpenseState extends State<NewExpense> {
                       (category) => DropdownMenuItem(
                         value: category,
                         child: Text(
-                          category.name.toUpperCase(),
+                          category.name.toLowerCase(),
                         ),
                       ),
                     )
@@ -151,7 +151,7 @@ class _newExpenseState extends State<NewExpense> {
                 onPressed: () {
                   Navigator.pop(context);
                 },
-                child: const Text('Cancel'),
+                child: const Text('Hætta Við'),
               ),
               ElevatedButton(
                 style: const ButtonStyle(
