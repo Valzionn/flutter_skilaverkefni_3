@@ -10,10 +10,10 @@ class Chart extends StatelessWidget {
 
   List<ExpenseBucket> get buckets {
     return [
-      ExpenseBucket.forCategory(expenses, Category.food),
-      ExpenseBucket.forCategory(expenses, Category.leisure),
-      ExpenseBucket.forCategory(expenses, Category.travel),
-      ExpenseBucket.forCategory(expenses, Category.work),
+      ExpenseBucket.forCategory(expenses, Category.matur),
+      ExpenseBucket.forCategory(expenses, Category.skemmtun),
+      ExpenseBucket.forCategory(expenses, Category.ferdir),
+      ExpenseBucket.forCategory(expenses, Category.vinna),
     ];
   }
 
@@ -48,8 +48,8 @@ class Chart extends StatelessWidget {
             Theme.of(context).colorScheme.primary.withOpacity(0.3),
             Theme.of(context).colorScheme.primary.withOpacity(0.0)
           ],
-          begin: Alignment.bottomCenter,
-          end: Alignment.topCenter,
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
         ),
       ),
       child: Column(

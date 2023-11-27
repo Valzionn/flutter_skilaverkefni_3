@@ -6,13 +6,13 @@ final formatter = DateFormat.yMd();
 
 const uuid = Uuid();
 
-enum Category { food, travel, leisure, work }
+enum Category { matur, ferdir, skemmtun, vinna }
 
 const categoryIcons = {
-  Category.food: Icons.lunch_dining,
-  Category.travel: Icons.flight_takeoff,
-  Category.leisure: Icons.movie,
-  Category.work: Icons.work,
+  Category.matur: Icons.ramen_dining,
+  Category.ferdir: Icons.local_airport,
+  Category.skemmtun: Icons.theaters,
+  Category.vinna: Icons.work,
 };
 
 class Expense {

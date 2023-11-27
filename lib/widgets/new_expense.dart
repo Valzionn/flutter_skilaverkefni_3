@@ -16,7 +16,7 @@ class _newExpenseState extends State<NewExpense> {
   final _titleController = TextEditingController();
   final _amountController = TextEditingController();
   DateTime? _selectedDate;
-  Category _selectedCategory = Category.leisure;
+  Category _selectedCategory = Category.skemmtun;
 
   void _presentDatePicker() async {
     final now = DateTime.now();
@@ -40,15 +40,15 @@ class _newExpenseState extends State<NewExpense> {
       showDialog(
         context: context,
         builder: (ctx) => AlertDialog(
-          title: const Text('Invalid Input'),
+          title: const Text('Röng Innstimplun'),
           content: const Text(
-              'Please make sure a valid title, amount, date and category was entered...'),
+              'Vertu viss um að þú hafir stimplað inn réttan flokk, dagsetningu, verð og fyrirsögn'),
           actions: [
             TextButton(
               onPressed: () {
                 Navigator.pop(ctx);
               },
-              child: const Text('Okay'),
+              child: const Text('Í Lagi'),
             ),
           ],
         ),
@@ -76,7 +76,7 @@ class _newExpenseState extends State<NewExpense> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.fromLTRB(16, 48, 16 , 16),
+      padding: const EdgeInsets.fromLTRB(16, 48, 16, 16),
       child: Column(
         children: [
           TextField(
@@ -93,7 +93,7 @@ class _newExpenseState extends State<NewExpense> {
                   controller: _amountController,
                   keyboardType: TextInputType.number,
                   decoration: const InputDecoration(
-                    prefixText: '\$ ',
+                    prefixText: 'isk ',
                     label: Text('Amount'),
                   ),
                 ),
@@ -154,8 +154,12 @@ class _newExpenseState extends State<NewExpense> {
                 child: const Text('Cancel'),
               ),
               ElevatedButton(
+                style: const ButtonStyle(
+                  backgroundColor: MaterialStatePropertyAll<Color>(
+                      Color.fromARGB(255, 8, 58, 58)),
+                ),
                 onPressed: _submitExpenseData,
-                child: const Text('Save Expense'),
+                child: const Text('Vista Kostnað'),
               ),
             ],
           ),

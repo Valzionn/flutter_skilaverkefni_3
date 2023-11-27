@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_skilaverkefni_3/widgets/expenses.dart';
 
 var kColorScheme = ColorScheme.fromSeed(
-  seedColor:Color.fromARGB(255, 78, 32, 184),
+  seedColor:Color.fromARGB(255, 36, 10, 95),
 );
 
 var kDarkColorScheme = ColorScheme.fromSeed(
   brightness: Brightness.dark,
-  seedColor: const Color.fromARGB(255, 5, 99, 125),
+  seedColor: Color.fromARGB(255, 18, 66, 80),
 );
 
 void main() {
@@ -62,28 +62,3 @@ void main() {
     ),
   );
 }
-//playerName
-// youDied
-// youSurvived
-// torch
-// ---- navigation/pages -----
-// startGame
-// ogreCaveEnterance
-// ogreCaveFirstBranch
-// wayOne
-// wayTwo
-// wayThree
-// ogreLair
-// ogreTrove
-// ogreTrap
-// ----interactables-----
-// loot
-// 	magic sword
-// 	gold
-// frontalAttack
-// sneakAttack
-// 	successful
-// 	failed
-// ---- reloads -----
-// tryAgain
-// victoryScreen 
